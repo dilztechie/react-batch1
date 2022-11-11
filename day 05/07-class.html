@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Demo</title>
+    <script src="objects/user.js"></script>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let println = (text) => document.getElementById('display').innerHTML += text + "<br />"
+
+        /*
+        let user1 = new User() // instantiation: creating object of the class
+        let user2 = new User() // creating object of the class
+        let user3 = new User() // creating object of the class
+        let user4 = new User() // creating object of the class
+
+        user1.username = "dilip" // initialize the members of the class
+        user1.password = "malani"
+        user2.username = "kiran" // initialize the members of the class
+        user2.password = "bekal"
+        user3.username = "gopal" // initialize the members of the class
+        user3.password = "narayan"
+        user4.username = "shiv" // initialize the members of the class
+        user4.password = "mani"
+        */
+
+        let user1 = new User("dilip", "malani")
+        let user2 = new User("kiran", "bekal")
+        let user3 = new User("gopal", "narayan")
+        let user4 = new User("shiv", "mani")
+
+
+        println("User 1:")
+        println("Username: " + user1.username) // accessing the members of the class
+        println("Password: " + user1.password)
+        println("<hr />")
+        println("User 2:")
+        println("Username: " + user2.username) // accessing the members of the class
+        println("Password: " + user2.password)
+        println("<hr />")
+        println("User 3:")
+        println("Username: " + user3.username) // accessing the members of the class
+        println("Password: " + user3.password)
+        println("<hr />")
+        println("User 4:")
+        println("Username: " + user4.username) // accessing the members of the class
+        println("Password: " + user4.password)
+        println("<hr />")
+    </script>
+</body>
+
+</html>

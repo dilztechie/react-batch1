@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Demo</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let println = (text) => document.getElementById('display').innerHTML += text + "<br />"
+
+        let convertToArray = (strMovies) => {
+            strMovies = strMovies.substring(1, strMovies.length - 1)
+            let movies = []
+            let iterator = strMovies.split(',')
+            for (let movie of iterator) movies.push(movie)
+            return movies
+        }
+
+        let employee = {
+            id: 12,
+            name: "Dilip",
+            designation: "Trainer",
+            isMarried: true,
+            favMovies: "['Kantara', 'RRR']"
+        }
+
+        println(JSON.stringify(employee))
+
+        let movies = convertToArray(employee.favMovies)
+        movies.forEach(println)
+
+        let strMovie = '{"title": "Kantara", "cast": "Rishabh Shetty", "language": "Kannada"}'
+        println("type of strMovie: " + typeof strMovie)
+        println("strMovie as a String: " + strMovie)
+
+        let movie = JSON.parse(strMovie)
+        println("type of movie: " + typeof movie)
+        println("movie as a Object: " + JSON.stringify(movie))
+    </script>
+</body>
+
+</html>

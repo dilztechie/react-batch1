@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Class Demo</title>
+    <script src="objects/department.js"></script>
+    <script src="objects/employee.js"></script>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let println = (text) => document.getElementById('display').innerHTML += text + "<br />"
+
+        let sales = new Department(101, "Sales", "Mumbai")
+        let service = new Department(102, "Service", "Chennai")
+        let development = new Department(103, "Development", "Hyderabad")
+        let hr = new Department(104, "HR", "Delhi")
+
+        let employee1 = new Employee(12, "Dilip", "Trainer", service, 30000.0)
+        println(employee1.toString())
+        println("<hr />")
+
+        let employee2 = new Employee(15, "Kiran", "Engineer", service, 50000.0)
+        println(employee2.toString())
+        println("<hr />")
+
+        let employee3 = new Employee(8, "Gopal", "HR Manager", hr, 75000.0)
+        println(employee3.toString())
+        println("<hr />")
+
+        let employee4 = new Employee(30, "Mahesh", "Salesman", sales, 40000.0)
+        println(employee4.toString())
+        println("<hr />")
+
+        let employee5 = new Employee(21, "Santhosh", "Sr. Developer", development, 80000.0)
+        println(employee5.toString())
+        println("<hr />")
+    </script>
+</body>
+
+</html>

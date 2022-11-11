@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Demo</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let println = (text) => document.getElementById('display').innerHTML += text + "<br />"
+
+        let groceries = new Map([
+            ['onion', 20],
+            ['tomato', 40],
+            ['corainder', 30]
+        ])
+
+        groceries.forEach((value, key) => println(key + " costing INR " + value))
+    </script>
+</body>
+
+</html>

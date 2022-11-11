@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+
+<body>
+    <pre id="clock"></pre>
+    <hr />
+    <pre id="display"></pre>
+    <hr />
+    <center>
+        <pre id="anime"></pre>
+    </center>
+    <script>
+        let println = (text, id) => document.getElementById(id).innerHTML = text
+
+        println(new Date(), 'clock')
+        setInterval(() => println(new Date(), 'clock'), 1000)
+
+        println('KIRAN', 'display')
+        setTimeout(() => println('KARAN', 'display'), 5000)
+
+        let text = prompt('text?')
+        println(text, 'anime')
+        text += " "
+
+        setInterval(() => {
+            text = text.substring(1) + text.charAt(0)
+            println(text, 'anime')
+        }, 100)
+    </script>
+</body>
+
+</html>

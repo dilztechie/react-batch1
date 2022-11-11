@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Class Demo</title>
+    <script src="objects/employee.js"></script>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let println = (text) => document.getElementById('display').innerHTML += text + "<br />"
+
+        let employee1 = new Employee(12, "Dilip", 30000.0)
+        println(employee1.toString())
+        println("Dearness Allowance: " + employee1.dearnessAllowance())
+        println("Travelling Allowance: " + employee1.travellingAllowance())
+        println("Gross Salary: " + employee1.grossSalary())
+        println("<hr />")
+
+        let employee2 = new Employee(15, "Kiran", 50000.0)
+        println(employee2.toString())
+        println("Dearness Allowance: " + employee2.dearnessAllowance())
+        println("Travelling Allowance: " + employee2.travellingAllowance())
+        println("Gross Salary: " + employee2.grossSalary())
+        println("<hr />")
+
+        let employee3 = new Employee(8, "Gopal", 75000.0)
+        println(employee3.toString())
+        println("Dearness Allowance: " + employee3.dearnessAllowance())
+        println("Travelling Allowance: " + employee3.travellingAllowance())
+        println("Gross Salary: " + employee3.grossSalary())
+        println("<hr />")
+    </script>
+</body>
+
+</html>
