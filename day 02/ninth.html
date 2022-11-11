@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninth</title>
+</head>
+
+<body>
+    <!-- Example on Logical Operators -->
+    <h3>Truth Table:</h3>
+    <div id="display"></div>
+    <script>
+        let conditionA, conditionB
+        let strDisplay = "<table border=1>";
+
+        strDisplay += "<tr>";
+        strDisplay += "<th colspan=3>&amp;&amp; : AND</th>";
+        strDisplay += "</tr>";
+
+        strDisplay += "<tr>";
+        strDisplay += "<th>conditionA</th>";
+        strDisplay += "<th>conditionB</th>"; 
+        strDisplay += "<th>conditionA &amp;&amp; conditionB</th>";
+        strDisplay += "</tr>";
+
+        conditionA = conditionB = false;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA && conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        conditionA = false;
+        conditionB = true;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA && conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        conditionA = true;
+        conditionB = false;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA && conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        conditionA = conditionB = true;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA && conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        strDisplay += "<tr>";
+        strDisplay += "<th colspan=3>|| : OR</th>";
+        strDisplay += "</tr>";
+
+        strDisplay += "<tr>";
+        strDisplay += "<th>conditionA</th>";
+        strDisplay += "<th>conditionB</th>";
+        strDisplay += "<th>conditionA || conditionB</th>";
+        strDisplay += "</tr>";
+
+        conditionA = conditionB = false;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA || conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        conditionA = false;
+        conditionB = true;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA || conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        conditionA = true;
+        conditionB = false;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA || conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        conditionA = conditionB = true;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + conditionB + "</td>";
+        strDisplay += "<td>" + (conditionA || conditionB) + "</td>";
+        strDisplay += "</tr>";
+
+        strDisplay += "<tr>";
+        strDisplay += "<th colspan=3>! : NOT</th>";
+        strDisplay += "</tr>";
+
+        strDisplay += "<tr>";
+        strDisplay += "<th>condition</th>";
+        strDisplay += "<th>!condition</th>";
+        strDisplay += "</tr>";
+
+        conditionA = true;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + (!conditionA) + "</td>";
+        strDisplay += "</tr>";
+
+        conditionA = false;
+        strDisplay += "<tr>";
+        strDisplay += "<td>" + conditionA + "</td>";
+        strDisplay += "<td>" + (!conditionA) + "</td>";
+        strDisplay += "</tr>";
+
+        strDisplay += "</table>";
+
+        document.getElementById("display").innerHTML = strDisplay;
+    </script>
+</body>
+
+</html>

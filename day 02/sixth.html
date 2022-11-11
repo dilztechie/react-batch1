@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixth</title>
+</head>
+
+<body>
+    <script>
+        // Simple if..else
+        /*
+        let month = parseInt(prompt("month?"));
+        let year = parseInt(prompt("year?"));
+        let nextMonth, nextYear
+        if (month == 12) {
+            nextMonth = 1;
+            nextYear = ++year;
+        } else {
+            nextMonth = ++month;
+            nextYear = year;
+        }
+        alert("Next Month is: " + nextMonth + " / " + nextYear);
+        */
+
+        // Nested if..else
+        /* 
+         * Logical Operators
+         * && AND
+         * || OR
+         * !  NOT
+         */
+        /*
+        let day = parseInt(prompt("day?"));
+        let month = parseInt(prompt("month?"));
+        let year = parseInt(prompt("year?"));
+        let nextDay, nextMonth, nextYear;
+        if (month == 12 || month == 10 || month == 8 || month == 7 || month == 5 || month == 3 || month == 1) {
+            if (day == 31) {
+                nextDay = 1;
+                nextMonth = 1;
+                nextYear = ++year;
+            } else {
+                nextDay = ++day;
+                nextMonth = month;
+                nextYear = year;
+            }
+        } else if (month == 11 || month == 9 || month == 6 || month == 4) {
+            if (day == 30) {
+                nextDay = 1;
+                nextMonth = ++month;
+                nextYear = year;
+            } else {
+                nextDay = ++day;
+                nextMonth = month;
+                nextYear = year;
+            }
+        } else {
+            if (year % 4 == 0 || year % 100 == 0 || year % 400 == 0) {
+                if (day == 29) {
+                    nextDay = 1;
+                    nextMonth = ++month;
+                    nextYear = year;
+                } else {
+                    nextDay = ++day;
+                    nextMonth = month;
+                    nextYear = year;
+                }
+            } else {
+                if (day == 28) {
+                    nextDay = 1;
+                    nextMonth = ++month;
+                    nextYear = year;
+                } else {
+                    nextDay = ++day;
+                    nextMonth = month;
+                    nextYear = year;
+                }
+            }
+        }
+        alert("Next Day: " + nextDay + " / " + nextMonth + " / " + nextYear);
+        */
+
+        // switch..case
+        let day = parseInt(prompt("day?"));
+        let month = parseInt(prompt("month?"));
+        let year = parseInt(prompt("year?"));
+        let nextDay, nextMonth, nextYear;
+
+        switch (month) {
+            case 12: case 10: case 8: case 7: case 5: case 4: case 1:
+                if (day == 31) {
+                    nextDay = 1;
+                    nextMonth = 1;
+                    nextYear = ++year;
+                } else {
+                    nextDay = ++day;
+                    nextMonth = month;
+                    nextYear = year;
+                }
+                break;
+            case 11: case 9: case 6: case 4:
+                if (day == 30) {
+                    nextDay = 1;
+                    nextMonth = ++month;
+                    nextYear = year;
+                } else {
+                    nextDay = ++day;
+                    nextMonth = month;
+                    nextYear = year;
+                }
+                break;
+            default:
+                if (year % 4 == 0 || year % 100 == 0 || year % 400 == 0) {
+                    if (day == 29) {
+                        nextDay = 1;
+                        nextMonth = ++month;
+                        nextYear = year;
+                    } else {
+                        nextDay = ++day;
+                        nextMonth = month;
+                        nextYear = year;
+                    }
+                } else {
+                    if (day == 28) {
+                        nextDay = 1;
+                        nextMonth = ++month;
+                        nextYear = year;
+                    } else {
+                        nextDay = ++day;
+                        nextMonth = month;
+                        nextYear = year;
+                    }
+                }
+        }
+        alert("Next Day: " + nextDay + " / " + nextMonth + " / " + nextYear);
+    </script>
+</body>
+
+</html>

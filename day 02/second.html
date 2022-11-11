@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second</title>
+</head>
+
+<body>
+    <script>
+        let value = true; // value is a boolean datatype
+        alert(typeof value) // boolean
+        value = String(value) // now value is a string datatype which contains "true"
+        alert(typeof value) // string
+
+        alert(
+            "'Dilip' * 2 = " + 'Dilip' * 2 + "\n" +
+            "typeof 'Dilip'*2: " + typeof 'Dilip' * 2 + "\n" +
+            "'12' * '3' = " + '12' * '3' + "\n" +
+            "typeof '12' * '3': " + typeof ('12' * '3')
+        );
+
+        let employee = null;
+        alert("typeof employee: " + typeof employee); // object
+
+        alert(
+            "Number('     27    '): " + Number('     27    ') + "\n" +
+            "Number('123abc'): " + Number('123abc') + "\n" +
+            "Number(true): " + Number(true) + "\n" +
+            "Number(false): " + Number(false)
+        );
+
+        alert(
+            "Boolean(1): " + Boolean(1) + "\n" +
+            "Boolean(0): " + Boolean(0) + "\n" +
+            "Boolean('dilip'): " + Boolean('dilip') + "\n" +
+            "Boolean(''): " + Boolean('') + "\n" +
+            "Boolean(-15): " + Boolean(-15)
+        );
+    </script>
+</body>
+
+</html>

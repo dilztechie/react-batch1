@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third</title>
+</head>
+
+<body>
+    <script>
+        let firstValue = 15;
+        let secondValue = 12;
+        alert(
+            "firstValue = " + firstValue + "\n" +
+            "secondValue = " + secondValue
+        );
+        let thirdValue = 30 - (firstValue = secondValue + 5);
+        alert(
+            "firstValue = " + firstValue + "\n" +
+            "secondValue = " + secondValue + "\n" +
+            "thirdValue = " + thirdValue
+        );
+
+        let number1 = number2 = number3 = 123;
+        alert("All Numbers will have same Value: " + number2);
+
+        let value = 12;
+        alert("initial value = " + value);
+        value += 15; // value = value + 15; // += -= *= /= %=
+        alert("now value = " + value);
+
+        let id = 12;
+        let name = "Dilip";
+        let averageMarks = (
+            marksInPaper1 = 35,
+            marksInPaper2 = 40,
+            marksInPaper3 = 45,
+            totalMarks = marksInPaper1 + marksInPaper2 + marksInPaper3,
+            totalMarks / 3
+        );
+        alert(
+            "Student Details:\n" +
+            "id: " + id + "\n" +
+            "name: " + name + "\n" +
+            "marksInPaper1: " + marksInPaper1 + "\n" +
+            "marksInPaper2: " + marksInPaper2 + "\n" +
+            "marksInPaper3: " + marksInPaper3 + "\n" +
+            "totalMarks: " + totalMarks + "\n" +
+            "averageMarks: " + averageMarks
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth</title>
+</head>
+
+<body>
+    <!-- Example on Scope in Block of Code -->
+    <script>
+        let strValue = "Hello";
+        let index = 123; // declaration of index
+        alert("index: " + index); // index is visible
+        // Scope in Block
+        {
+            let index = 7; // index is entirely different from global index
+            alert("strValue: " + strValue); // strValue is visible
+            alert("index: " + index); // index is visible
+            alert("index inside the block: " + index);
+            {
+                let radius = 5.5;
+                alert("radius: " + radius);
+                index = index + 15; // index will refer to immediate before block
+                alert("index inside inner-inner block: " + index);
+            }
+            alert("index outside the inner-inner block: " + index);
+            // alert("radius outside the inner-inner block: " + radius); // error - not visible
+        }
+    </script>
+</body>
+
+</html>
