@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+</head>
+
+<body>
+    <h3>While Loop</h3>
+    <div id="display"></div>
+    <script>
+        // while loop: Repetition: pre-testing
+        let counter = 1, total = 0;
+        while (counter <= 10) {
+            total += parseInt(prompt("grade " + counter++ + "?"));
+        }
+        document.getElementById("display").innerHTML = `
+            <p>Total: ${total}</p>
+            <p>Average: ${total / 10}</p>
+        `;
+    </script>
+</body>
+
+</html>

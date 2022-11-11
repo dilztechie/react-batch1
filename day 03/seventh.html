@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seventh</title>
+</head>
+
+<body>
+    <script>
+        let numbers = []; // creating an empty array: let numbers = new Array();
+        let names = ["Dilip", "Kiran", "Gopal", "Mahesh", "Santhosh", "Silver"];
+        alert(names[3]); // Mahesh
+        names[4] = "Kushal";
+        alert(names.length); // length of the array: 6
+        // mix of datatype values in an array
+        let myArray = [12, "Dilip", 'M', "Trainer", true, 34512.45];
+        alert(names[names.length - 1]); // Silver
+        alert(names.at(-1)); // Silver
+
+        // remove values: pop
+        alert(names.pop()); // remove the last value & display
+        // add values: push
+        names.push("Kavya"); // add the value to the last of the array
+
+        names.unshift("Ashok"); // adds the value to the begining of the array
+        names.shift(); // remove the first value
+
+        names.indexOf("Mahesh"); // index of "Mahesh" in the list
+    </script>
+</body>
+
+</html>

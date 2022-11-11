@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second</title>
+</head>
+
+<body>
+    <h3>Do..While Loop</h3>
+    <div id="display"></div>
+    <script>
+        // do..while: post-testing
+        let counter = 0, total = 0, grade, passCounter = failCounter = 0;
+        alert("enter grades or -1 to quit");
+        do {
+            grade = parseInt(prompt("grade [-1 to quit]?"));
+            if (grade != -1) {
+                total += grade;
+                if (grade < 35) ++passCounter; else ++failCounter;
+                ++counter;
+            }
+        } while (grade != -1);
+        document.getElementById("display").innerHTML = `
+            <p>No. of Grades: ${counter}</p>
+            <p>Total: ${total}</p>
+            <p>Average: ${total / counter}</p>
+            <p>Passes: ${passCounter}</p>
+            <p>Failures: ${failCounter}</p>
+        `;
+    </script>
+</body>
+
+</html>

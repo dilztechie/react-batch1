@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleventh</title>
+</head>
+
+<body>
+    <h3>Matrix A</h3>
+    <pre id="displayA"></pre>
+
+    <h3>Matrix B</h3>
+    <pre id="displayB"></pre>
+
+    <h3>Resultant Matrix R = Matrix A + Matrix B</h3>
+    <pre id="displayR"></pre>
+
+    <script>
+        let matrixA = new Array(3);
+        let matrixB = new Array(3);
+        let matrixR = new Array(3);
+
+        alert("Enter Values in Matrix A:");
+        for (let row = 0; row < 3; ++row) {
+            matrixA[row] = new Array(3);
+            for (let col = 0; col < 3; ++col) {
+                matrixA[row][col] = parseInt(prompt("enter value for row:" + (row + 1) + ", col:" + (col + 1)));
+                document.getElementById("displayA").innerHTML += matrixA[row][col] + "  ";
+            }
+            document.getElementById("displayA").innerHTML += "<br />";
+        }
+
+        alert("Enter Values in Matrix B:");
+        for (let row = 0; row < 3; ++row) {
+            matrixB[row] = new Array(3);
+            for (let col = 0; col < 3; ++col) {
+                matrixB[row][col] = parseInt(prompt("enter value for row:" + (row + 1) + ", col:" + (col + 1)));
+                document.getElementById("displayB").innerHTML += matrixB[row][col] + "  ";
+            }
+            document.getElementById("displayB").innerHTML += "<br />";
+        }
+
+        for (let row = 0; row < 3; ++row) {
+            matrixR[row] = new Array(3);
+            for (let col = 0; col < 3; ++col) {
+                matrixR[row][col] = matrixA[row][col] + matrixB[row][col];
+                document.getElementById("displayR").innerHTML += matrixR[row][col] + "  ";
+            }
+            document.getElementById("displayR").innerHTML += "<br />";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third</title>
+</head>
+
+<body>
+    <h3>For Loop</h3>
+    <div id="display"></div>
+    <script>
+        // for: pre-testing: (initialization; condition; assignments)
+        let number = parseInt(prompt("number?"));
+        //        (1)              (2) <-------- (4)
+        for (let counter = 1; counter <= 10; ++counter) {
+            //                      /
+            //                     / (3)
+            document.getElementById("display").innerHTML += `
+                ${number} x ${counter} = ${number * counter} <br />
+            `;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth</title>
+</head>
+
+<body>
+    <h3>Census</h3>
+    <div id="display"></div>
+    <script>
+        let ctrBaby = ctrYoung = ctrTeenager = ctrMiddleAge = ctrAdults = ctrOldAge = 0;
+        let strDisplay = `
+            <table border=1>
+                <tr>
+                    <th>Age Group</th>
+                    <th>Age Intervals</th>
+                    <th>Total Members</th>
+                    <th>Graph</th>
+        `;
+        let age;
+        do {
+            age = parseInt(prompt("Enter age [-1 to quit]?"));
+            if (age >= 0 && age <= 2) ++ctrBaby;
+            else if (age >= 3 && age <= 19) ++ctrYoung;
+            else if (age >= 20 && age <= 29) ++ctrTeenager;
+            else if (age >= 30 && age <= 39) ++ctrMiddleAge;
+            else if (age >= 40 && age <= 59) ++ctrAdults;
+            else if (age >= 60) ++ctrOldAge;
+        } while (age != -1);
+
+        // ctrBaby Row
+        strDisplay += `
+            <tr>
+                <td>Baby</td>
+                <td>0 ~ 2</td>
+                <td>${ctrBaby}</td>
+                <td>
+        `;
+        for (let counter = 1; counter <= ctrBaby; ++counter) {
+            strDisplay += '*';
+        }
+        strDisplay += `
+                </td>
+            </tr>
+        `
+        // ctrYoung Row
+        strDisplay += `
+            <tr>
+                <td>Young</td>
+                <td>3 ~ 19</td>
+                <td>${ctrYoung}</td>
+                <td>
+        `;
+        for (let counter = 1; counter <= ctrYoung; ++counter) {
+            strDisplay += '*';
+        }
+        strDisplay += `
+                </td>
+            </tr>
+        `
+        // ctrTeenager Row
+        strDisplay += `
+            <tr>
+                <td>Teenager</td>
+                <td>20 ~ 29</td>
+                <td>${ctrTeenager}</td>
+                <td>
+        `;
+        for (let counter = 1; counter <= ctrTeenager; ++counter) {
+            strDisplay += '*';
+        }
+        strDisplay += `
+                </td>
+            </tr>
+        `
+        // ctrMiddleAge Row
+        strDisplay += `
+            <tr>
+                <td>Middle Age</td>
+                <td>30 ~ 39</td>
+                <td>${ctrMiddleAge}</td>
+                <td>
+        `;
+        for (let counter = 1; counter <= ctrMiddleAge; ++counter) {
+            strDisplay += '*';
+        }
+        strDisplay += `
+                </td>
+            </tr>
+        `
+        // ctrAdults Row
+        strDisplay += `
+            <tr>
+                <td>Adults</td>
+                <td>0 ~ 2</td>
+                <td>${ctrAdults}</td>
+                <td>
+        `;
+        for (let counter = 1; counter <= ctrAdults; ++counter) {
+            strDisplay += '*';
+        }
+        strDisplay += `
+                </td>
+            </tr>
+        `
+        // ctrOldAge Row
+        strDisplay += `
+            <tr>
+                <td>Old Age</td>
+                <td>&gt; 60</td>
+                <td>${ctrOldAge}</td>
+                <td>
+        `;
+        for (let counter = 1; counter <= ctrOldAge; ++counter) {
+            strDisplay += '*';
+        }
+        strDisplay += `
+                </td>
+            </tr>
+        </table>
+        `
+        document.getElementById("display").innerHTML = strDisplay;
+    </script>
+</body>
+
+</html>

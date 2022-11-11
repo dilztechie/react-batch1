@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninth</title>
+</head>
+
+<body>
+    <h3>Dice Game</h3>
+    <pre id="display"></pre>
+    <script>
+        let strDisplay = "";
+        let faces = [0, 0, 0, 0, 0, 0];
+        let times = parseInt(prompt("how many times you want to roll the dice?"));
+        for (let time = 1; time <= times; ++time) {
+            let face = 1 + parseInt(Math.random() * 6);
+            ++faces[face - 1];
+        }
+        let counter = 1;
+        for (let count of faces) {
+            strDisplay += counter + " :: " + count + " :: ";
+            for (let starCount = 1; starCount <= count; ++starCount) {
+                strDisplay += "*";
+            }
+            strDisplay += "<br />"
+            ++counter;
+        }
+        document.getElementById("display").innerHTML = strDisplay;
+    </script>
+</body>
+
+</html>

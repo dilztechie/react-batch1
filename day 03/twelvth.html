@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twelvth</title>
+</head>
+
+<body>
+    <h3>Jagged Array</h3>
+    <pre id="display"></pre>
+    <script>
+        let jaggedArray = [
+            [1],
+            [2, 3],
+            [4, 5, 6],
+            [7, 8, 9, 10]
+        ];
+        for (let row = 0; row < jaggedArray.length; ++row) {
+            for (let col = 0; col < jaggedArray[row].length; ++col) {
+                document.getElementById("display").innerHTML += jaggedArray[row][col] + "  ";
+            }
+            document.getElementById("display").innerHTML += "<br />";
+        }
+    </script>
+</body>
+
+</html>

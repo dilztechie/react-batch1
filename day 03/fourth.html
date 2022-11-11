@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth</title>
+</head>
+
+<body>
+    <h3>Interest on Loan Amount</h3>
+    <div id="display"></div>
+    <script>
+        let principal = parseFloat(prompt("principal amount?"));
+        let rateOfInterest = parseFloat(prompt("rate of interest?"));
+        let duration = parseInt(prompt("duration in years?"));
+
+        let strDisplay = `
+            <table border=1>
+                <tr>
+                    <th>Year</th>
+                    <th>Loan Amount</th>
+                </tr>
+        `;
+
+        for (let year = 1; year <= duration; ++year) {
+            strDisplay += `
+                <tr>
+                    <td>${year}</td>
+                    <td>${(principal * ((1.0 + rateOfInterest) ** year))}</td>
+                </tr>
+            `;
+        }
+
+        strDisplay += '</table>';
+
+        document.getElementById("display").innerHTML = strDisplay;
+    </script>
+</body>
+
+</html>

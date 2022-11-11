@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenth</title>
+</head>
+
+<body>
+    <h3>Matrix</h3>
+    <pre id="display"></pre>
+    <script>
+        let matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        for (let row = 0; row < matrix.length; ++row) {
+            for (let col = 0; col < matrix[row].length; ++col) {
+                document.getElementById("display").innerHTML += matrix[row][col] + "   ";
+            }
+            document.getElementById("display").innerHTML += "<br />";
+        }
+    </script>
+</body>
+
+</html>

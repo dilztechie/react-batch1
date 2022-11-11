@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixth</title>
+</head>
+
+<body>
+    <h3>Arrays</h3>
+    <div id="display"></div>
+    <script>
+        // Arrays are Collection of Values in a Single Reference
+        let favNumbers = [12, 15, 26, 21, 30, 8, 3];
+        let names = ["Dilip", "Kiran", "Gopal"];
+        let veggies = ["Brinjal", "Beans", "Carrot", "Ladies Finger"];
+        let fruits = ["apple", "orange", "banana", "sapota"];
+        document.getElementById("display").innerHTML = `
+            <p>Numbers: ${favNumbers}</p>
+            <p>Names: ${names}</p>
+            <p>Veggies: ${veggies}</p>
+            <p>Fruits: ${fruits}</p>
+        `;
+        let total = 0;
+        for (let number of favNumbers) {
+            total += number;
+        }
+        document.getElementById("display").innerHTML += `<p>Total: ${total}</p>`;
+    </script>
+</body>
+
+</html>

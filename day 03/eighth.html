@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eighth</title>
+</head>
+
+<body>
+    <h3>Arrays</h3>
+    <pre id="display"></pre>
+    <script>
+        let numbers = [87, 68, 94, 100, 83, 78, 85, 91, 76, 87];
+        let total = 0;
+        document.getElementById("display").innerHTML = "Numbers: ";
+        for (let number of numbers) {
+            document.getElementById("display").innerHTML += number + " ";
+            total += number;
+        }
+        document.getElementById("display").innerHTML += ":: Total: " + total;
+    </script>
+</body>
+
+</html>
