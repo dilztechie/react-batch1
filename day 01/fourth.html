@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Boxes</title>
+</head>
+
+<body>
+    <script>
+        alert("This is an Example for Dialog Boxes");
+        let name = prompt("name?");
+        let salary = parseFloat(prompt("salary?"));
+        alert("Good to know that " + name + " draws a salary of " + salary);
+        let answer = confirm("Do you Acknowledge?");
+        alert("You Confirmed: " + answer);
+
+        let number = parseInt(prompt("number?"));
+        number = number + 5;
+        alert(
+            "number at this point: " + number + "\n" +
+            "number at pre-increment: " + ++number + "\n" +
+            "number at this point: " + number + "\n" +
+            "number at post-increment: " + number++ + "\n" +
+            "number at this point: " + number
+        );
+        alert(
+            "number at this point: " + number + "\n" +
+            "number at pre-decrement: " + --number + "\n" +
+            "number at this point: " + number + "\n" +
+            "number at post-decrement: " + number-- + "\n" +
+            "number at this point: " + number
+        );
+    </script>
+</body>
+
+</html>

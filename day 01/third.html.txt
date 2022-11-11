@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Variables</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        let id = 12; // integer datatype
+        let name = "Dilip"; // string datatype
+        let designation = "Trainer";
+        let city = "Mangalore";
+        let salary = 30500.25; // double datatype
+        let isMarried = true; // boolean datatype
+        let gender = 'M'; // char datatype
+
+        const PI = 3.14;
+        let radius = 5;
+
+        alert(
+            'id: ' + id + '\n' +
+            'name: ' + name + '\n' +
+            'gender: ' + gender + '\n' +
+            'designation: ' + designation + '\n' +
+            'city: ' + city + '\n' +
+            'isMarried: ' + isMarried + '\n' +
+            'salary: ' + salary
+        );
+
+        alert(
+            'pi: ' + PI + '\n' +
+            'radius: ' + radius + '\n' +
+            'circumference = 2*PI*radius: ' + 2 * PI * radius + '\n' +
+            'area = PI*radius*radius: ' + PI * radius ** 2
+        );
+
+        let number = 81;
+        let sqrtNumber = number ** (1 / 2);
+        let cbrtNumber = number ** (1 / 3);
+
+        radius = 10;
+        // Error: PI = 2.14; // Constant Values cannot be changed
+        alert(
+            'pi: ' + PI + '\n' +
+            'radius: ' + radius + '\n' +
+            'circumference = 2*PI*radius: ' + 2 * PI * radius + '\n' +
+            'area = PI*radius*radius: ' + PI * radius ** 2
+        );
+
+        name = prompt('What is your name?'); // used for user input
+        alert('Nice to meet you, ' + name);
+
+        /*
+        let strFirstNumber = prompt('First Number?');
+        let strSecondNumber = prompt('Second Number?');
+        let firstNumber = parseInt(strFirstNumber);
+        let secondNumber = parseInt(strSecondNumber);
+        let sum = firstNumber + secondNumber;
+        */
+        let firstNumber = parseInt(prompt('First Number?'));
+        let secondNumber = parseInt(prompt('Second Number?'));
+        alert(
+            'sum = ' + (firstNumber + secondNumber) + '\n' +
+            'difference = ' + (firstNumber - secondNumber) + '\n' +
+            'product = ' + firstNumber * secondNumber + '\n' +
+            'division = ' + firstNumber / secondNumber + '\n' +
+            'remainder = ' + firstNumber % secondNumber
+        );
+
+        alert("Dilip" * 12); // NaN
+        alert(12 / 0); // Infinity
+    </script>
+</body>
+
+</html>
