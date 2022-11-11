@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twelvth</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let print = (text) => document.getElementById("display").innerHTML += (text ?? "");
+        let println = (text) => document.getElementById("display").innerHTML += (text ?? "") + "<br />";
+
+        let movies = [{
+            title: "Kantara",
+            cast: "Rishab Shetty, Sapthami Gowda, Kishore, Achyuth Kumar",
+            music: "Ajaneesh Loknath",
+            director: "Rishab Shetty",
+            language: "Kannada"
+        }, {
+            title: "RRR",
+            cast: "Ram Charan, NT Rama Rao Jr., Ajay Devgn, Alia Bhatt, Shriya",
+            music: "M M Keeravani",
+            director: "S S Rajamouli",
+            language: "Telugu"
+        }, {
+            title: "Ponniyin Selvan: I",
+            cast: "Aishwarya Rai, Trisha, Vikram, Karthi, Jayaram Ravi",
+            music: "A R Rahman",
+            director: "Mani Rathnam",
+            language: "Tamil"
+        }];
+
+        for (let movie of movies) {
+            for (let key in movie) {
+                println(key + ": " + movie[key]);
+            }
+            println("<hr />");
+        }
+    </script>
+</body>
+
+</html>

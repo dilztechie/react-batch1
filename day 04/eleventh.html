@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleventh</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let print = (text) => document.getElementById("display").innerHTML += (text ?? "");
+        let println = (text) => document.getElementById("display").innerHTML += (text ?? "") + "<br />";
+
+        let user = {
+            username: "dilip",
+            password: "malani",
+        };
+
+
+        println("username: " + ("username" in user ? user.username : "undefined"));
+        println("password: " + ("password" in user ? user.password : "undefined"));
+        println("loggedIn: " + (user.loggedIn ?? "No"));
+    </script>
+</body>
+
+</html>

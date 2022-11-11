@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    <script>
+        function print(message = "no text", author = "admin") {
+            document.getElementById("display").innerHTML += author + " says: **" + message + "**<br />";
+        }
+        print("I am tutoring on JS", "dilz");
+        print("Wassup Guys!", "kiran");
+        print("This is a Demo on JS", "user");
+        print("Hello All!!!");
+        print();
+    </script>
+</body>
+
+</html>

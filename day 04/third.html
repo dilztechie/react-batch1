@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        function display(text) {
+            document.getElementById("display").innerHTML += (text ?? "no text") + "<br />";
+        }
+        display(12);
+        display("Dilip");
+        display(true);
+        display(31245.782);
+        display(); // undefined: no text
+        display(null); // null: no text
+    </script>
+</body>
+
+</html>

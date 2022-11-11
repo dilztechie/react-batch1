@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixth</title>
+</head>
+
+<body>
+    <script>
+        /*
+        function showCasual() {
+            alert("Hey, Hi!");
+        }
+        function showFormal() {
+            alert("Hello, Sir!");
+        }
+        */
+
+        let age = parseInt(prompt("age?"));
+        let welcome = (age >= 18) ?
+            function () {
+                alert("Hello, Sir!");
+            } :
+            function () {
+                alert("Hey, Hi!");
+            };
+        welcome();
+    </script>
+</body>
+
+</html>

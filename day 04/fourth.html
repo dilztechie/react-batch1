@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        function sum(firstNumber, secondNumber) {
+            return firstNumber + secondNumber;
+        }
+        function difference(firstNumber, secondNumber) {
+            return (firstNumber < secondNumber) ? secondNumber - firstNumber : firstNumber - secondNumber;
+        }
+        function product(firstNumber, secondNumber) {
+            return firstNumber * secondNumber;
+        }
+        function division(firstNumber, secondNumber) {
+            return firstNumber / secondNumber;
+        }
+
+        let firstNumber = parseInt(prompt("first number?"));
+        let secondNumber = parseInt(prompt("second number?"));
+
+        document.getElementById("display").innerHTML += `
+            First Number = ${firstNumber}
+            Second Number = ${secondNumber}
+            Sum = ${sum(firstNumber, secondNumber)}
+            Difference = ${difference(firstNumber, secondNumber)}
+            Product = ${product(firstNumber, secondNumber)}
+            Division = ${division(firstNumber, secondNumber)}
+        `;
+    </script>
+</body>
+
+</html>

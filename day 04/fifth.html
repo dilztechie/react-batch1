@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth</title>
+</head>
+
+<body>
+
+    <pre id="display"></pre>
+
+    <script>
+        function isEligibleToVote(age) {
+            return age >= 18;
+        }
+
+        function isEligibleToTravel(age) {
+            if (age < 18) {
+                return confirm('Do you have permission from Parents?');
+            }
+            return true;
+        }
+
+        let isEligibleToDrink = isEligibleToTravel;
+
+        let age = parseInt(prompt("age?"));
+
+        document.getElementById("display").innerHTML += `
+            Eligible to Vote: ${isEligibleToVote(age)}
+            Eligible to Travel: ${isEligibleToTravel(age)}
+            Eligible to Drink: ${isEligibleToDrink(age)}
+        `;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seventh</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    <script>
+        // Arrow Functions: Functions written as Expressions
+        let print = (message) => document.getElementById("display").innerHTML += message + "<br />";
+        let printEmpty = () => document.getElementById("display").innerHTML += "<br />";
+        let printSum = (first, second) => first + second;
+
+        print("This is a Demonstration on Arrow Functions!");
+        printEmpty();
+        print("This is another Line of Text!!");
+        print("Sum = " + printSum(12, 26));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenth</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let print = (text) => document.getElementById("display").innerHTML += (text ?? "");
+        let println = (text) => document.getElementById("display").innerHTML += (text ?? "") + "<br />";
+
+        // let employee = new Object();
+        // let employee = {};
+        let food = prompt("favourite food?", "sprouts");
+        let employee = {
+            id: 12,
+            name: "Dilip",
+            designation: "Trainer",
+            gender: 'M',
+            salary: 34567.12,
+            isMarried: true,
+            "favourite movies": ["Kaantara", "RRR"],
+            [food]: "Sprouts are Good for Health!"
+        };
+        println("Employee Details:");
+        println("id: " + employee.id);
+        println("name: " + employee.name);
+        println("designation: " + employee.designation);
+        println("gender: " + (employee.gender == 'M' || employee.gender == 'm') ? "Male" : "Female");
+        println("salary: " + employee.salary);
+        println("isMarried: " + employee.isMarried);
+        println("like movies: " + employee["favourite movies"]);
+        println(employee.sprouts);
+    </script>
+</body>
+
+</html>

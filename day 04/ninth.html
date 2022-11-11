@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninth</title>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        function printArray(array) {
+            array.forEach(element => {
+                document.getElementById("display").innerHTML += element + "   "
+            });
+        }
+
+        function print(text) {
+            document.getElementById('display').innerHTML += text + '<br />'
+        }
+
+        function sum(...args) { // Rest Parameter
+            let total = 0;
+            for (let arg of args) total += arg;
+            return total;
+        }
+
+        let myArray = [12, "Dilip", "Trainer", 'M', true, 34567.12];
+        printArray(myArray);
+        print('');
+        print('Sum = ' + sum(12, 26, 15, 30, 8));
+    </script>
+</body>
+
+</html>
