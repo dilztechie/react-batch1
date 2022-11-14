@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <script src="lib/console.js"></script>
+    <script src="objects/box.js"></script>
+    <script src="objects/box-weight.js"></script>
+</head>
+
+<body>
+    <div id="display"></div>
+    <script>
+        let box1 = new Box(12.0, 15.0, 26.0)
+        let box2 = new Box(1.2, 1.5, 2.6)
+        let box3 = new Box(12.15, 15.26, 26.30)
+        let box4 = box2 // reference
+        let box5 = box1.doubleBox() // new object
+
+        box2.depth = 100
+        box1.depth = 100
+
+        let boxes = [box1, box2, box3, box4, box5]
+
+        let boxesWithWeight = [
+            new BoxWeight(10.0, 20.0, 30.0, 100.0),
+            new BoxWeight(1.0, 2.0, 3.0, 10.0)
+        ]
+        boxes.forEach(box => println(box.boxInfo() + " :: " + "Volume:" + box.volume(), "display"))
+        boxesWithWeight.forEach(box => println(box.boxWeightInfo() + " :: " + "Volume:" + box.volume(), "display"))
+    </script>
+</body>
+
+</html>

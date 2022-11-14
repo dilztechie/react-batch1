@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <script src="lib/console.js"></script>
+    <script src="objects/account.js"></script>
+    <script src="objects/savings.js"></script>
+    <script src="objects/current.js"></script>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        /*
+        try {
+            address
+        } catch (error) {
+            alert("Name: " + error.name + "\nMessage: " + error.message)
+        }
+        */
+
+        try {
+            let acc1101 = new Account("ACC1101", "Dummy Account", "Undefined", 4000)
+            println(acc1101, "display")
+            println("<hr />", "display")
+        } catch (error) {
+            println(error, "display")
+        }
+
+        let sb1101 = new Savings("SB1101", "Dilip Malani", 3000)
+        let cc2101 = new Current("CC2101", "Dilz Inc.", 10000)
+        let sb1102 = new Savings("SB1102", "Raj Malhotra", 10000)
+        let sb1103 = new Savings("SB1103", "Rahul Verma", 5000)
+        let cc2102 = new Current("CC2102", "Local Cafe", 5000)
+        let sb1104 = new Savings("SB1104", "Amith Shastri", 1000)
+
+        let accounts = [sb1101, cc2101, sb1102, sb1103, cc2102, sb1104]
+
+        println("Initial Opening Accounts", "display")
+        accounts.forEach(account => println(account, "display"))
+        println("<hr />", "display")
+
+        println("Transactions on Accounts:", "display")
+        try {
+            println("Withdraw 3000 from SB1101: " + sb1101.withdraw(3000), "display")
+        } catch (error) {
+            println(error, "display")
+        }
+        try {
+            println("Withdraw 1000 from SB1103: " + sb1103.withdraw(1000), "display")
+        } catch (error) {
+            println(error, "display")
+        }
+        try {
+            println("Deposit 5000 in SB1101: " + sb1101.deposit(5000), "display")
+        } catch (error) {
+            println(error, "display")
+        }
+        try {
+            println("Deposit -500 in CC2102: " + cc2102.deposit(-500), "display")
+        } catch (error) {
+            println(error, "display")
+        }
+        println("<hr />", "display")
+
+        println("After Transaction Balances:", "display")
+        accounts.forEach(account => println(account, "display"))
+        println("<hr />", "display")
+    </script>
+</body>
+
+</html>
