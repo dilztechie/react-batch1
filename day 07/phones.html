@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phones</title>
+    <script src="lib/console.js"></script>
+    <script src="objects/basic-phone.js"></script>
+    <script src="objects/advanced-phone.js"></script>
+    <script src="objects/smart-phone.js"></script>
+</head>
+
+<body>
+    <div id="display"></div>
+    <script>
+        let phones = [
+            new BasicPhone("Nokia", "1100", "GSM", new Date(2003, 2, 14), "Mini-SIM",
+                false, false, true, 850, 4.3, 1799),
+            new AdvancedPhone("Nokia", "Asha 503", "GSM/HSPA", new Date(2013, 9, 15),
+                "102.6 x 60.6 x 12.7 mm (4.04 x 2.39 x 0.5 in)", undefined,
+                "Dual SIM (Micro-SIM, dual stand-by)", "TFT, 256K colors",
+                "240 x 320 pixels, 4:3 ratio (~133 ppi density)",
+                "Nokia Asha software platform 1.2, upgradable to 1.4",
+                true, true, true, 1200, 4.3, 8378),
+            new SmartPhone("Apple", "iPhone 14 Pro Max",
+                "GSM/CDMA/HSPA/EVDO/LTE/5G", new Date(2022, 8, 7),
+                "160.7 x 77.6 x 7.9 mm (6.33 x 3.06 x 0.31 in)", "240 g (8.47 oz)",
+                "Glass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame",
+                "Nano-SIM and eSIM - International<br />Dual eSIM with multiple numbers - USA<br />Dual SIM(Nano - SIM, dual stand - by) - China",
+                "LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)",
+                "1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)",
+                "iOS 16, upgradable to iOS 16.1",
+                "Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)",
+                "Apple GPU (5-core graphics)", false, "1TB 6GB", ["16MP", false],
+                "5.3, A2DP, LE", false,
+                "Face ID, accelerometer, gyro, proximity, compass, barometer<br />Ultra Wideband(UWB) support",
+                4323, 5.5, 89403)
+        ]
+        phones.forEach(phone => {
+            /*
+            if (phone.constructor === BasicPhone) println(phone.showBasicPhone(), "display")
+            else if (phone.constructor === AdvancedPhone) println(phone.showAdvancedPhone(), "display")
+            else println(phone.showSmartPhone(), "display")
+            */
+            println(
+                (phone instanceof SmartPhone ? phone.showSmartPhone() :
+                    phone instanceof AdvancedPhone ? phone.showAdvancedPhone() :
+                        phone.showBasicPhone()), "display"
+            )
+            println("<hr />", "display")
+        })
+    </script>
+</body>
+
+</html>

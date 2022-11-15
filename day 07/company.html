@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <script src="lib/console.js"></script>
+    <script src="objects/department.js"></script>
+    <script src="objects/employee.js"></script>
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let sales = new Department(1, "Sales", "Mumbai")
+        let service = new Department(2, "Service", "Chennai")
+        let development = new Department(3, "Development", "Bengaluru")
+        let support = new Department(4, "Support", "Hyderabad")
+        let training = new Department(5, "Training", "Pune")
+        let hr = new Department(6, "HR", "Delhi")
+
+        let employees = [
+            new Employee(12, "Dilip", "Trainer", training, 30000),
+            new Employee(8, "Gopal", "HR", hr, 75000),
+            new Employee(15, "Kiran", "Admin", support, 50000),
+            new Employee(5, "Ashok", "Office Boy", service, 3000),
+            new Employee(1, "Zeeshan", "Developer", development, 30000),
+            new Employee(26, "Mahesh", "Executive", sales, 25000)
+        ]
+
+        employees.forEach(employee => println(employee, "display"))
+        println("<hr />", "display")
+
+        println("Sort according to Employee id:", "display")
+        employees.sort((firstEmployee, secondEmployee) => firstEmployee.id - secondEmployee.id)
+        employees.forEach(employee => println(employee, "display"))
+        println("<hr />", "display")
+
+        println("Sort according to Employee name:", "display")
+        employees.sort((firstEmployee, secondEmployee) => {
+            if (firstEmployee.name.toString() < secondEmployee.name.toString()) return -1
+            else return 1
+        })
+        employees.forEach(employee => println(employee, "display"))
+        println("<hr />", "display")
+
+        println("Sort according to Employee designation:", "display")
+        employees.sort((firstEmployee, secondEmployee) =>
+            firstEmployee.designation.toString() < secondEmployee.designation.toString() ?
+                -1 : 1)
+        employees.forEach(employee => println(employee, "display"))
+        println("<hr />", "display")
+
+        println("Sort according to Department id:", "display")
+        employees.sort((firstEmployee, secondEmployee) =>
+            firstEmployee.department.id - secondEmployee.department.id
+        )
+        employees.forEach(employee => println(employee, "display"))
+        println("<hr />", "display")
+
+        println("Filter Employees drawing salary >= 30000:", "display")
+        let filteredEmployees = employees.filter(employee => employee.salary >= 30000)
+        filteredEmployees.forEach(employee => println(employee, "display"))
+        println("<hr />", "display")
+    </script>
+</body>
+
+</html>

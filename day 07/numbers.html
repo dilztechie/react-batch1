@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+    <script src="lib/console.js"></script>
+    <!-- <script src="objects/comparator.js"></script> -->
+</head>
+
+<body>
+    <pre id="display"></pre>
+    <script>
+        let numbers = [12, 15, 26, 21, 14, 8, 30, 5, 27, 10, 3, 1]
+        println("Numbers Unsorted: " + numbers, "display")
+        // numbers.sort(Comparator.sortByValues)
+        numbers.sort((first, second) => second - first)
+        println("Numbers Sorted: " + numbers, "display")
+        numbers.reverse()
+        println("Numbers Reversed Order: " + numbers, "display")
+        let doubleNumbers = numbers.map(number => number * 2)
+        println("Double of Numbers: " + doubleNumbers, "display")
+        let greaterNumbers = numbers.filter(number => number > 15)
+        println("Numbers > 15: " + greaterNumbers, "display")
+    </script>
+</body>
+
+</html>
