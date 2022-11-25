@@ -1,0 +1,9 @@
+.cart {
+    min-height: 8vh;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    display: inline-flex;
+    min-width: 100%;
+}

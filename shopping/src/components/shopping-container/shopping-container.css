@@ -1,0 +1,10 @@
+.container {
+    background-color: antiquewhite;
+    color: darkslategray;
+    min-height: 80vh;
+}
+
+.header {
+    padding: 2em;
+    color: brown;
+}

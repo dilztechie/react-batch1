@@ -1,0 +1,23 @@
+.items-header {
+    padding: 1em;
+    text-align: left;
+}
+
+.items-fruits {
+    min-width: 50%;
+    color: lightsalmon;
+}
+
+.items-vegetables {
+    min-width: 50%;
+    color: darkgreen;
+}
+
+.items-bakery {
+    min-width: 50%;
+    color: chocolate;
+}
+
+.wrapper {
+    display: inline-flex;
+}
