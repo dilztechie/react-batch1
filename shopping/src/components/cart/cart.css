@@ -7,3 +7,9 @@
     display: inline-flex;
     min-width: 100%;
 }
+
+.btnRemove {
+    background-color: black;
+    color: white;
+    border-style: none;
+}

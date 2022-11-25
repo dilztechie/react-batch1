@@ -11,7 +11,7 @@ let items = {
     ],
     bakery: [
         { unicode: 0X1F35E, name: 'bread', price: 45 },
-        { unicode: 0X1F950, name: 'croissant', price: 50 },
+        { unicode: 0X1F950, name: 'croissant', price: 15 },
         { unicode: 0X1F354, name: 'burger', price: 40 }
     ]
 }
