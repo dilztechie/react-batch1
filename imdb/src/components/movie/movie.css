@@ -1,0 +1,47 @@
+.title {
+    color: brown;
+    text-align: left;
+}
+
+.release {
+    position: absolute;
+    margin-left: -600px;
+    margin-top: -40px;
+    text-align: left;
+}
+
+.rating {
+    position: absolute;
+    margin-left: -500px;
+    margin-top: -40px;
+    text-align: left;
+}
+
+.language {
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -40px;
+    text-align: left;
+}
+
+.director {
+    position: absolute;
+    margin-left: -600px;
+    color: blue;
+    margin-top: -40px;
+    text-align: left;
+}
+
+.stars {
+    position: absolute;
+    margin-left: -600px;
+    color: chocolate;
+    margin-top: -40px;
+    text-align: left;
+}
+
+.movie {
+    border: 1px red solid;
+    margin: 1em;
+    padding: 1em;
+}
