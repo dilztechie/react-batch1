@@ -1,0 +1,8 @@
+.wrapper {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.logos {
+    padding: 1em;
+}
