@@ -1,59 +1,92 @@
 {
-    "movies": [
-        {
-            "movie": {
-                "title": "777 Charlie",
-                "stars": "Rakshit Shetty, Charlie, Sangeetha, Raj Shetty",
-                "director": "Kiranraj",
-                "language": "Kannada",
-                "release": 2022,
-                "rating": 8.9
-            },
-            "id": 1
-        },
-        {
-            "movie": {
-                "title": "Kantara",
-                "stars": "Rishab Shetty, Kishore, Achyuth Kumar, Sapthami Gowda",
-                "director": "Rishab Shetty",
-                "language": "Kannada",
-                "release": 2022,
-                "rating": 8.8
-            },
-            "id": 2
-        },
-        {
-            "movie": {
-                "title": "Rocketry: The Nambi Effect",
-                "stars": "Madhavan, Simran, Rajat Kapoor, Shahrukh Khan",
-                "director": "Madhavan",
-                "language": "Hindi",
-                "release": 2022,
-                "rating": 8.8
-            },
-            "id": 3
-        },
-        {
-            "movie": {
-                "title": "Nayakan",
-                "stars": "Kamal Haasan, Saranya",
-                "director": "Mani Ratnam",
-                "language": "Tamil",
-                "release": 1987,
-                "rating": 8.6
-            },
-            "id": 4
-        },
-        {
-            "movie": {
-                "title": "Gol Maal",
-                "stars": "Amol Palekar, Bindya Goswami, Devan Verma",
-                "director": "Hrishikesh Mukherjee",
-                "language": "Hindi",
-                "release": 1979,
-                "rating": 8.5
-            },
-            "id": 5
-        }
-    ]
+  "movies": [
+    {
+      "movie": {
+        "title": "777 Charlie",
+        "stars": "Rakshit Shetty, Charlie, Sangeetha, Raj Shetty",
+        "director": "Kiranraj",
+        "language": "Kannada",
+        "release": 2022,
+        "rating": 8.9
+      },
+      "id": 1
+    },
+    {
+      "movie": {
+        "title": "Kantara",
+        "stars": "Rishab Shetty, Kishore, Achyuth Kumar, Sapthami Gowda",
+        "director": "Rishab Shetty",
+        "language": "Kannada",
+        "release": 2022,
+        "rating": 8.8
+      },
+      "id": 2
+    },
+    {
+      "movie": {
+        "title": "Rocketry: The Nambi Effect",
+        "stars": "Madhavan, Simran, Rajat Kapoor, Shahrukh Khan",
+        "director": "Madhavan",
+        "language": "Hindi",
+        "release": 2022,
+        "rating": 8.8
+      },
+      "id": 3
+    },
+    {
+      "movie": {
+        "title": "Nayakan",
+        "stars": "Kamal Haasan, Saranya",
+        "director": "Mani Ratnam",
+        "language": "Tamil",
+        "release": 1987,
+        "rating": 8.6
+      },
+      "id": 4
+    },
+    {
+      "movie": {
+        "title": "Gol Maal",
+        "stars": "Amol Palekar, Bindya Goswami, Devan Verma",
+        "director": "Hrishikesh Mukherjee",
+        "language": "Hindi",
+        "release": 1979,
+        "rating": 8.5
+      },
+      "id": 5
+    },
+    {
+      "movie": {
+        "title": "3 Idiots",
+        "stars": "Aamir Khan, Madhavan, Sharman Joshi, Katreena Kaif, Boman Irani",
+        "director": "Rajkumar Hirani",
+        "language": "Hindi",
+        "release": 2009,
+        "rating": 8
+      },
+      "id": 6
+    },
+    {
+      "movie": {
+        "title": "Manichithrathazhu",
+        "stars": "Shobana, Mohanlal, Suresh Gopi",
+        "director": "Fazil",
+        "language": "Malayalam",
+        "release": 1993,
+        "rating": 8.8
+      },
+      "id": 7
+    },
+    {
+      "movie": {
+        "title": "#Home",
+        "stars": "Indrans, Sreenath, Manju Pillai",
+        "director": "Rojin Thomas",
+        "language": "Malayalam",
+        "release": 2021,
+        "rating": 8.8
+      },
+      "id": 8
+    }
+  ]
 }
