@@ -1,0 +1,13 @@
+.wraper {
+    padding: 20px
+}
+
+img {
+    width: auto;
+    height: 300px;
+}
+
+a {
+    border: none;
+    background-color: white;
+}
