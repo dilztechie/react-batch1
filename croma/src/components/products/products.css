@@ -1,8 +1,27 @@
 .wrapper {
-    display: inline-flex;
-    flex-direction: column;
+    padding: 1em
 }
 
 .logos {
+    border: 1px chocolate solid;
+}
+
+img {
+    background: none;
+    background-color: white;
+    height: auto;
+    width: 100px;
     padding: 1em;
+}
+
+button {
+    margin: 10px;
+    background: white;
+    border: none;
+}
+
+.mobiles .televisions .laptops {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px crimson solid
 }

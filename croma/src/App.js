@@ -1,10 +1,11 @@
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 import './App.css';
 import Products from './components/products/products';
 
 const store = createStore(() => ({
   mobiles: [{
+    id: 'APPIPH14+',
     brand: 'Apple',
     model: 'iPhone 14 Plus',
     display: '6.7 inches (16.95 cm) OLED Display',
@@ -14,6 +15,7 @@ const store = createStore(() => ({
     battery: 'Qi Wireless Charging Up to 7.5W'
   }],
   televisions: [{
+    id: 'SONBRA43',
     brand: 'Sony',
     model: 'Bravia 108 cm (43 inches) Full HD LED Smart Android TV',
     display: 'Full HD LED, 1920 x 1080 pixels, 60Hz Refresh Rate',
@@ -22,6 +24,7 @@ const store = createStore(() => ({
     features: 'Dolby Audio & Alexa Compatibility'
   }],
   laptops: [{
+    id: 'APPMACAIR2020',
     brand: 'Apple',
     model: 'MacBook Air 2020',
     processor: 'Apple M1',
