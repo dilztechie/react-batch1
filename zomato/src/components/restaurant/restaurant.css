@@ -1,0 +1,12 @@
+.restaurant {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid goldenrod;
+}
+
+button {
+    background-color: aquamarine;
+    color: crimson;
+    border: 1px;
+}

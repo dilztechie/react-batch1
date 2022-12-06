@@ -11,22 +11,28 @@ export default function App() {
       name: 'Ideal Cafe',
       cuisines: ['South Indian', 'Ice Cream', 'North Indian', 'Cafe', 'Desserts', 'Juices'],
       address: 'Hampankatta, Mangalore',
-      menu: '../../assets/ideal-cafe'
+      menu: '/assets/ideal-cafe'
     }, {
       id: 1002,
       name: 'Hotel Janatha Deluxe Veg - Pathumudi Soudha',
       cuisines: ['South Indian', 'North Indian', 'Fast Food', 'Street Food', 'Beverages', 'Desserts'],
       address: 'Lalbagh, Mangalore',
-      menu: '../../assets/janata-delux'
+      menu: '/assets/janata-delux'
     }],
     vada: [{
       id: 2001,
       name: 'Hotel Sai Palace - Udipi Cafe Veg',
       cuisines: ['South Indian', 'Beverages', 'Street Food', 'Chinese', 'North Indian', 'Mithai', 'Desserts', 'Shakes'],
       address: 'Hampankatta, Mangalore',
-      menu: '../../assets/sai-palace'
+      menu: '/assets/sai-palace'
     }],
-    dosa: [{}]
+    dosa: [{
+      id: 3001,
+      name: 'Hotel Sai Palace - Udipi Cafe Veg',
+      cuisines: ['South Indian', 'Beverages', 'Street Food', 'Chinese', 'North Indian', 'Mithai', 'Desserts', 'Shakes'],
+      address: 'Hampankatta, Mangalore',
+      menu: '/assets/sai-palace'
+    }]
   }))
 
   return <div className="App" >
