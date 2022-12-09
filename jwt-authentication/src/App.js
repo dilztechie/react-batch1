@@ -5,6 +5,7 @@ import LoginPage from './components/login-page/login-page';
 import HomePage from './components/home-page/home-page';
 import RegisterPage from './components/register-page/register-page';
 import ProfilePage from './components/profile-page/profile-page';
+import TestJson from './components/test-json/test-json';
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/test" element={<TestJson />} />
           </Routes>
         </div>
       </div>

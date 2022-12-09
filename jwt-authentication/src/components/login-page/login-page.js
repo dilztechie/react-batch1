@@ -4,28 +4,29 @@ import profileImage from '../../assets/profile.jpg'
 import Form from 'react-validation/build/form'
 import Input from 'react-validation/build/input'
 import CheckButton from 'react-validation/build/button'
-import AuthenticationService from "../../services/authentication-service";
+import { withRouter } from "../../common/with-router";
 
 const required = value => {
   if (!value)
-    return <div className="alert alert-danger" role="alert">
-      This field is required!
+    return <div className="form-group" >
+      <div className="alert alert-danger" role="alert">
+        This field is Required!
+      </div>
     </div>
 }
 
-export default class LoginPage extends React.Component {
+class LoginPage extends React.Component {
   constructor(props) {
     super(props)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleUsername = this.handleUsername.bind(this)
     this.handlePassword = this.handlePassword.bind(this)
-  }
-
-  state = {
-    username: "",
-    password: "",
-    message: "",
-    loading: false
+    this.state = {
+      username: "",
+      password: "",
+      message: "",
+      loading: false
+    }
   }
 
   handleUsername = event => this.setState({ username: event.target.value })
@@ -35,20 +36,6 @@ export default class LoginPage extends React.Component {
     event.preventDefault()
     this.setState({ message: "", loading: true })
     this.form.validateAll()
-    if (this.checkBtn.context._errors.length === 0) {
-      AuthenticationService.login(this.state.username, this.state.password)
-        .then(() => {
-          this.props.router.navigate("/profile")
-          window.location.reload()
-        }, error => {
-          const errorMessage =
-            (error.response && error.response.data && error.response.data.message) ||
-            error.message || error.toString()
-          this.setState({ loading: false, message: errorMessage })
-        })
-    } else {
-      this.setState({ loading: false })
-    }
   }
 
   render = () => <>
@@ -88,3 +75,5 @@ export default class LoginPage extends React.Component {
     </div>
   </>
 }
+
+export default withRouter(LoginPage)
