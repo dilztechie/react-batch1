@@ -1,20 +1,54 @@
 {
-    "users": [
-        {
-            "user": {
-                "username": "dilz",
-                "email": "mail2dilz@gmail.com",
-                "password": "dilz@1226"
-            },
-            "id": 1
-        },
-        {
-            "user": {
-                "username": "kinnu",
-                "email": "kiran.bekal@gmail.com",
-                "password": "kinnu@1215"
-            },
-            "id": 2
-        }
-    ]
+  "users": [
+    {
+      "user": {
+        "name": "Dilip Malani",
+        "username": "dilz",
+        "email": "mail2dilz@gmail.com",
+        "password": "dilz@1226",
+        "role": "admin"
+      },
+      "id": 1
+    },
+    {
+      "user": {
+        "name": "Kiran Bekalkar",
+        "username": "kinnu",
+        "email": "kiran.bekal@gmail.com",
+        "password": "kinnu@1215",
+        "role": "user"
+      },
+      "id": 2
+    },
+    {
+      "user": {
+        "name": "Gopal Narayan",
+        "username": "gopi",
+        "email": "gopi.n@gmail.com",
+        "password": "gopi@1208",
+        "role": "user"
+      },
+      "id": 3
+    },
+    {
+      "user": {
+        "name": "Pankaj Meshram",
+        "username": "panki",
+        "email": "panki.m@gmail.com",
+        "password": "panki@2508",
+        "role": "admin"
+      },
+      "id": 4
+    },
+    {
+      "user": {
+        "name": "Kavya M",
+        "username": "kavya",
+        "email": "kavya.m@gmail.com",
+        "password": "kavz@1226",
+        "role": "user"
+      },
+      "id": 5
+    }
+  ]
 }

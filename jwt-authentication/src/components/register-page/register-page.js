@@ -6,13 +6,22 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button"
 import { isEmail } from "validator";
 import { withRouter } from "../../common/with-router";
-import AuthenticationService from "../../services/authentication-service";
+import authenticationService from "../../services/authentication-service";
 
 const required = value => {
   if (!value)
     return <div className="form-group" >
       <div className="alert alert-danger" role="alert">
         This field is Required!
+      </div>
+    </div>
+}
+
+const validateFullName = value => {
+  if (value.length < 3)
+    return <div className="form-group" >
+      <div className="alert alert-danger" role="alert">
+        The Full Name must have at least 3 characters
       </div>
     </div>
 }
@@ -47,39 +56,45 @@ const validatePassword = value => {
 class RegisterPage extends React.Component {
   constructor(props) {
     super(props)
+    this.handleFullName = this.handleFullName.bind(this)
     this.handleUsername = this.handleUsername.bind(this)
+    this.handleEmail = this.handleEmail.bind(this)
     this.handlePassword = this.handlePassword.bind(this)
     this.handleRegister = this.handleRegister.bind(this)
-    this.handleEmail = this.handleEmail.bind(this)
+    this.handleMessage = this.props.handleMessage
     this.state = {
+      fullName: "",
       username: "",
       email: "",
       password: "",
+      role: "",
       message: "",
       successful: false
     }
   }
 
+  handleFullName = event => this.setState({ fullName: event.target.value })
   handleUsername = event => this.setState({ username: event.target.value })
   handleEmail = event => this.setState({ email: event.target.value })
   handlePassword = event => this.setState({ password: event.target.value })
+  handleRole = event => this.setState({ role: event.target.value })
 
   handleRegister = event => {
     event.preventDefault()
     this.setState({ message: "", successful: false })
     this.form.validateAll()
     if (this.checkBtn.context._errors.length === 0) {
-      AuthenticationService.register(
-        this.state.username, this.state.email, this.state.password
-      ).then(response => {
-        this.setState({ message: response.data.message, successful: true })
-      }, error => {
-        const errorMessage =
-          (error.response && error.response.data && error.response.data.message) ||
-          error.message || error.toString()
-        this.setState({ successful: false, message: errorMessage })
-      })
+      let isRegistered = authenticationService.register(
+        this.state.fullName,
+        this.state.username,
+        this.state.email,
+        this.state.password,
+        this.state.role
+      )
+      if (isRegistered) this.handleMessage("User Successfully Created")
+      else this.handleMessage("User Creation Failed")
     }
+    this.props.router.navigate("/home")
   }
 
   render = () => <>
@@ -89,6 +104,12 @@ class RegisterPage extends React.Component {
       <div className="card card-container">
         <Form onSubmit={this.handleRegister} ref={c => { this.form = c }}>
           {!this.state.successful && (<>
+            <div className="form-group">
+              <label htmlFor="fullName">Full Name</label>
+              <Input type="text" className="form-control" name="fullName"
+                onChange={this.handleFullName}
+                validations={[required, validateFullName]} />
+            </div>
             <div className="form-group">
               <label htmlFor="username">Username</label>
               <Input type="text" className="form-control" name="username"
@@ -106,6 +127,15 @@ class RegisterPage extends React.Component {
               <Input type="password" className="form-control" name="password"
                 onChange={this.handlePassword}
                 validations={[required, validatePassword]} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="role">Role</label>
+              <Input type="radio" name="role" value="admin"
+                onChange={this.handleRole} />
+              <span>Admin</span>
+              <Input type="radio" name="role" value="user"
+                onChange={this.handleRole} />
+              <span>User</span>
             </div>
             <div className="form-group">
               <button className="btn btn-primary btn-block">Signup</button>
