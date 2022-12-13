@@ -7,12 +7,16 @@ class HomePage extends React.Component {
 
   constructor(props) {
     super(props)
-    this.handleRole = this.props.handleRole
-    if (localStorage.getItem("user") === "") {
+    if (localStorage.getItem("user") === null) {
       this.state.body = <>
         <p>Existing Users: Click <a href="/login">here</a> to Login</p>
         <p>New Users: Click <a href="/register">here</a> to Register</p>
-        <p>{this.props.message}</p>
+        <p>{
+          localStorage.getItem("isRegistered") === null ? "" :
+            localStorage.getItem("isRegistered") ?
+              "User Created Successfully" :
+              "User Creation Failed"
+        }</p>
       </>
     }
   }

@@ -29,6 +29,8 @@ class LoginPage extends React.Component {
       message: "",
       loading: false
     }
+    localStorage.removeItem("user")
+    localStorage.removeItem("isRegistered")
   }
 
   handleUsername = event => this.setState({ username: event.target.value })
@@ -39,10 +41,9 @@ class LoginPage extends React.Component {
     this.setState({ message: "", loading: true })
     this.form.validateAll()
     if (this.checkBtn.context._errors.length === 0) {
-      let data = AuthenticationService.login(this.state.username, this.state.password)
-      if (data !== null) {
-        this.handleName(data.user.name)
-        this.props.router.navigate("/profile/" + data.user.role)
+      let user = AuthenticationService.login(this.state.username, this.state.password)
+      if (user !== null) {
+        this.props.router.navigate("/profile/" + user.role)
       } else
         this.setState({ loading: false, message: "User not Found" })
     }

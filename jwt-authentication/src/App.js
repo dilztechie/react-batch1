@@ -10,16 +10,6 @@ import UserProfilePage from './components/user-profile-page/user-profile-page';
 import React from 'react';
 
 export default class App extends React.Component {
-
-  constructor(props) {
-    super(props)
-    localStorage.setItem("user", "")
-    this.state = { name: null, message: "" }
-  }
-
-  handleName = name => this.setState({ name: name })
-  handleMessage = message => this.setState({ message: message })
-
   render = () => <>
     <div className="App" >
       <header className="App-header">Dilz Inc.</header>
@@ -44,12 +34,12 @@ export default class App extends React.Component {
         </nav>
         <div className='container mt-3'>
           <Routes>
-            <Route path="/" element={<HomePage message={this.state.message} />} />
-            <Route path="/home" element={<HomePage message={this.state.message} />} />
-            <Route path="/login" element={<LoginPage handleName={this.handleName} />} />
-            <Route path="/register" element={<RegisterPage handleMessage={this.handleMessage} />} />
-            <Route path="/profile/admin" element={<AdminProfilePage name={this.state.name} />} />
-            <Route path="/profile/user" element={<UserProfilePage name={this.state.name} />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/profile/admin" element={<AdminProfilePage />} />
+            <Route path="/profile/user" element={<UserProfilePage />} />
             <Route path="/test" element={<TestJson />} />
           </Routes>
         </div>

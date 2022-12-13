@@ -1,5 +1,6 @@
 class AuthenticationService {
-    result = null
+    user = null
+    isRegistered = false
 
     register = (fullName, username, email, password, role) => {
         fetch('http://localhost:3030/users', {
@@ -16,8 +17,9 @@ class AuthenticationService {
             headers: { 'Content-type': 'application/json' }
         }).then(response => {
             response.json()
-        }).catch(error => false)
-        return true
+            this.isRegistered = true
+        })
+        return this.isRegistered
     }
 
     login = (username, password) => {
@@ -26,12 +28,11 @@ class AuthenticationService {
             .then(users => {
                 users.map(data => {
                     if (data.user.username === username && data.user.password === password)
-                        this.result = data
-                    return this.result
+                        this.user = data.user
                 })
             })
-        localStorage.setItem("user", this.result)
-        return this.result
+        localStorage.setItem("user", JSON.stringify(this.user))
+        return this.user
     }
 }
 

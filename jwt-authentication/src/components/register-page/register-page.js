@@ -61,7 +61,6 @@ class RegisterPage extends React.Component {
     this.handleEmail = this.handleEmail.bind(this)
     this.handlePassword = this.handlePassword.bind(this)
     this.handleRegister = this.handleRegister.bind(this)
-    this.handleMessage = this.props.handleMessage
     this.state = {
       fullName: "",
       username: "",
@@ -71,6 +70,8 @@ class RegisterPage extends React.Component {
       message: "",
       successful: false
     }
+    localStorage.removeItem("user")
+    localStorage.removeItem("isRegistered")
   }
 
   handleFullName = event => this.setState({ fullName: event.target.value })
@@ -91,8 +92,7 @@ class RegisterPage extends React.Component {
         this.state.password,
         this.state.role
       )
-      if (isRegistered) this.handleMessage("User Successfully Created")
-      else this.handleMessage("User Creation Failed")
+      localStorage.setItem("isRegistered", isRegistered)
     }
     this.props.router.navigate("/home")
   }
