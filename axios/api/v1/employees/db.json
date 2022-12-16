@@ -1,16 +1,10 @@
 {
-    "employees": [
-        {
-            "id": 1,
-            "firstName": "Dilip",
-            "lastName": "Malani",
-            "emailId": "mail2dilz@gmail.com"
-        },
-        {
-            "id": 2,
-            "firstName": "Kiran",
-            "lastName": "Bekalkar",
-            "emailId": "kiran.rb@bat.com"
-        }
-    ]
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Dilip",
+      "lastName": "Malani",
+      "emailId": "mail2dilz@gmail.com"
+    }
+  ]
 }

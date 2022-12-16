@@ -11,9 +11,9 @@ function App() {
     <div className='container'>
       <Router>
         <Switch>
-          <Route path="/" component={ListEmployee} />
-          <Route path="/employees" component={ListEmployee} />
-          <Route path="/add-employee/:id" component={CreateEmployee} />
+          <Route exact path="/" component={ListEmployee} />
+          <Route exact path="/employees" component={ListEmployee} />
+          <Route path="/edit-employee/:id" component={CreateEmployee} />
         </Switch>
       </Router>
     </div>

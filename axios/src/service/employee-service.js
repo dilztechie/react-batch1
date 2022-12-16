@@ -1,20 +1,18 @@
-import axios from "axios";
+import axios from "axios"
 
 const EMS_API_BASE_URL = "http://localhost:7080/employees/"
 
 class EmployeeService {
 
-    client = axios.create({ baseURL: EMS_API_BASE_URL })
+    createEmployee = employee => axios.post(EMS_API_BASE_URL, employee) // POST
 
-    createEmployee = employee => this.client.post(employee) // POST
+    getEmployees = () => axios.get(EMS_API_BASE_URL) // GET 
 
-    getEmployees = () => this.client.get() // GET 
+    getEmployeeById = id => axios.get(EMS_API_BASE_URL + id) // GET
 
-    getEmployeeById = id => this.client.get(id) // GET
+    updateEmployee = (employee, id) => axios.put(EMS_API_BASE_URL + id, employee) // PUT
 
-    updateEmployee = (employee, id) => this.client.put(id, employee) // PUT
-
-    deleteEmployee = id => this.client.delete(id) // DELETE
+    deleteEmployee = id => axios.delete(EMS_API_BASE_URL + id) // DELETE
 
 }
 

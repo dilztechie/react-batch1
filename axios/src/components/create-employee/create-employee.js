@@ -15,6 +15,8 @@ export default class CreateEmployee extends React.Component {
     this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this)
     this.changeLastNameHandler = this.changeLastNameHandler.bind(this)
     this.changeEmailIdHandler = this.changeEmailIdHandler.bind(this)
+    this.handleSave = this.handleSave.bind(this)
+    this.handleCancel = this.handleCancel.bind(this)
   }
 
   componentDidMount = () => {
@@ -37,11 +39,29 @@ export default class CreateEmployee extends React.Component {
   changeLastNameHandler = event => this.setState({ lastName: event.target.value })
   changeEmailIdHandler = event => this.setState({ emailId: event.target.value })
 
+  handleSave = event => {
+    event.preventDefault()
+    let employee = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      emailId: this.state.emailId
+    }
+    if (this.state.id === '_add')
+      employeeService.createEmployee(employee).then(response =>
+        this.props.history.push('/employees'))
+    else
+      employeeService.updateEmployee(employee, this.state.id).then(response =>
+        this.props.history.push('/employees'))
+  }
+
+  handleCancel = () => this.props.history.push("/employees")
+
   render = () => <div>
+    <br />
     <div className="container">
       <div className="row">
         <div className="card col-md-6 offset-md-3 offset-md-3">
-          {this.getTitle}
+          {this.getTitle()}
           <div className="card body">
             <form>
               <div className="form-group">
@@ -59,6 +79,11 @@ export default class CreateEmployee extends React.Component {
                 <input placeholder="email id?" name="emailId" className="form-control"
                   value={this.state.emailId} onChange={this.changeEmailIdHandler} />
               </div>
+              <br />
+              <button className="btn btn-success"
+                onClick={this.handleSave}>Save</button>
+              <button className="btn btn-danger" style={{ marginLeft: "10px" }}
+                onClick={this.handleCancel}>Cancel</button>
             </form>
           </div>
         </div>

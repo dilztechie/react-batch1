@@ -6,25 +6,14 @@ export default class ListEmployee extends React.Component {
 
   constructor(props) {
     super(props)
-
-    this.state = {
-      employees: []
-    }
-
+    this.state = { employees: [] }
     this.addEmployee = this.addEmployee.bind(this)
-    this.editEmployee = this.editEmployee.bind(this)
-    this.deleteEmployee = this.deleteEmployee.bind(this)
+    this.updateEmployee = this.updateEmployee.bind(this)
   }
 
-  addEmployee = () => {
-    this.props.history.push('/add-employee/_add')
-    window.location.reload()
-  }
+  addEmployee = () => this.props.history.push('/edit-employee/_add')
 
-  editEmployee = id => {
-    this.props.history.push(`/add-employee/${id}`)
-    window.location.reload()
-  }
+  updateEmployee = id => this.props.history.push(`/edit-employee/${id}`)
 
   deleteEmployee = id => employeeService.deleteEmployee(id).then(response =>
     this.setState({ employees: this.state.employees.filter(employee => employee.id !== id) }))
@@ -35,12 +24,14 @@ export default class ListEmployee extends React.Component {
   render = () => <div>
     <h2 className="text-center">Employees List</h2>
     <div className="row">
-      <button className="btn btn-primary" onClick={() => this.addEmployee()}>Add Employee</button>
+      <button className="btn btn-primary" onClick={this.addEmployee}>Add Employee</button>
     </div>
+    <br />
     <div className="row">
       <table className="table table-striped table-bordered">
         <thead>
           <tr>
+            <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email Id</th>
@@ -50,12 +41,13 @@ export default class ListEmployee extends React.Component {
         <tbody>
           {this.state.employees.map(employee =>
             <tr key={employee.id}>
+              <td>{employee.id}</td>
               <td>{employee.firstName}</td>
               <td>{employee.lastName}</td>
               <td>{employee.emailId}</td>
               <td>
                 <button className="btn btn-info"
-                  onClick={() => this.editEmployee(employee.id)}>Update</button>
+                  onClick={() => this.updateEmployee(employee.id)}>Update</button>
                 <button className="btn btn-danger" style={{ marginLeft: "10px" }}
                   onClick={() => this.deleteEmployee(employee.id)}>Delete</button>
               </td>
